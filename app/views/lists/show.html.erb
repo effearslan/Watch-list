@@ -2,16 +2,21 @@
   <h1><%= @list.name %> </h1>
 </div>
 
+<div class='cards2'>
 <% @list.movies.each do |movie| %>
-  <div class='container' style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= image_path movie.poster_url %>')">
-  <p>Title: <%= movie.title %></p>
-  <p>Overview: <%= movie.overview %></p>
+  <div class='movie-card' style="background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.2)), url('<%= image_path movie.poster_url %>')">
+  <h3>Overview</h3>
+  <p><%= movie.overview %></p>
   <p>Rating: <%= movie.rating %></p>
 
   <% movie.bookmarks.each do |book| %>
   <p>Comment: <%= book.comment %></p>
   <% end %>
-  <p><%= link_to 'Destroy', bookmark_path(Bookmark.find_by(movie: movie, list: @list)), method: :delete, data: { confirm: 'Are you sure?' } %></p>
+
+  <p><%= link_to 'Delete', bookmark_path(Bookmark.find_by(movie: movie, list: @list)), method: :delete, data: { confirm: 'Are you sure?' } %></p>
   </div>
 <% end %>
+</div>
+<div class='btn btn-success add-book-btn'>
 <%= link_to "ADD BOOKMARK", new_list_bookmark_path(@list) %>
+</div>

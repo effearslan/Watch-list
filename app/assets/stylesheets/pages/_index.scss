@@ -3,17 +3,20 @@
 #banner {
   background-image: url("https://d1dxs113ar9ebd.cloudfront.net/225batonrouge/2021/03/iStock-1271522601.jpg?q=70&crop=faces&fit=crop&w=1300&h=600");
   background-size: cover;
+  background-position: center;
   height: 300px;
   color: rgb(243, 232, 232);
 }
 #banner h1{
   padding-top: 50px;
   padding-left: 100px;
+  text-shadow: 0px 0px 10px rgba(0,0,0,0.7);
 }
 
 #banner h3{
   padding-top: 20px;
   padding-left: 100px;
+  text-shadow: 0px 0px 10px rgba(0,0,0,0.6);
 }
 .container {
   display: grid;
@@ -24,17 +27,24 @@
   margin-top: 20px;
 }
 
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  background-size: cover;
+  justify-items: center;
+}
+
 .genre {
   height: 200px;
   width: 200px;
   text-align: center;
-  margin-top: 20px;
+  margin-top: 40px;
   padding-top: 50px;
-  margin-left: 20px;
   background-size: cover;
   color: antiquewhite;
-  border: 2px solid rgb(49, 49, 46);
+  border-radius: 6px;
   font-size: 24px;
+  box-shadow: 1px 3px 96px -5px rgba(0,0,0,0.78);
 }
 
 .genre a {
@@ -46,13 +56,23 @@
 }
 
 .list-btn {
-  margin-left: 80%;
+  margin-left: 90%;
   margin-top: 40px;
+  box-shadow: -6px 3px 142px 8px rgba(0,0,0,0.75);
 }
 
 .show {
   text-decoration: none;
+}
 
+.add-book-btn a{
+  text-decoration: none;
+  color:rgb(243, 232, 232);
+}
+
+.add-book-btn {
+  display: table;
+  margin: 20px auto;
 }
 
 .header {
@@ -60,4 +80,30 @@
   height: 400px;
   padding: 130px 150px;
   background-size: cover;
+  background-origin: center;
+}
+
+.cards2 {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-size: cover;
+  justify-items: center;
+}
+
+.movie-card {
+  margin-top: 30px;
+  height: 600px;
+  width: 500px;
+  padding-top: 230px;
+  padding-left: 30px;
+  padding-right: 30px;
+  background-size: cover;
+  color:rgb(226, 211, 193);
+  text-shadow: -9px 2px 21px rgba(0,0,0,0.92);
+  border-radius: 6px;
+}
+
+.movie-card a{
+  color:sandybrown;
 }
