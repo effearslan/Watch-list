@@ -7,5 +7,15 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-Movie.create(title: "fjjfjfight", overview: "Debbiejejejfjfeof female thieves to pull off the heist of the century.", poster_url: "https://image.tmdb.org/t/p/original/MvYpKlpFueieizGbkAe3v.jpg", rating: 5.0)
-Movie.create(title: "Rome", overview: "Debmnsdknsdkdnkdmnwhers a crew of female thieves to pull off the heist of the century.", poster_url: "https://image.tmdb.org/t/p/original/MvYpKlpFukejeGbkAe3v.jpg", rating: 4.0)
+url = "http://tmdb.lewagon.com/movie/top_rated"
+
+movies = JSON.parse(URI.open(url).read)["results"]
+
+movies.each do |movie|
+    Movie.create!(
+        title: movie["title"],
+        overview: movie["overview"],
+        rating: movie["vote_average"],
+        poster_url: "https://image.tmdb.org/t/p/w500#{movie["poster_path"]}"
+    )
+end

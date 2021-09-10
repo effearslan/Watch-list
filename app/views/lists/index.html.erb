@@ -1,9 +1,19 @@
-<h1>List of Genres</h1>
-
-<% @lists.each do |list| %>
-  <tr>
-    <td><%= list.name %></td>
-    <td><%= link_to 'Show', list %></td>
-  </tr>
-<% end %>
-<%= link_to 'New List', new_list_path %>
+<div id="banner">
+  <h1>Your Movie List</h1>
+  <h3>Categorize with your own movie genres</h3>
+</div>
+<div class='d-flex'>
+  <% @lists.each do |list| %>
+    <div class='genre' background=url_link>
+      <p><%= list.name %></p>
+      <p class="show"><%= link_to 'Show', list %></p>
+      <%# <% case list.name %>
+      <%# <% when 'Drama' %>
+      <%# <% url_link = 'https://media.istockphoto.com/photos/woman-watching-an-emotional-movie-picture-id1159202990?k=20&m=1159202990&s=612x612&w=0&h=2j0R2sflsDPmiO3rLvYv0PSyXLubVSXLnrhZjdLslxk=' %>
+      <%#  end %>
+    </div>
+  <% end %>
+</div>
+<div class='btn btn-primary list-btn'>
+  <%= link_to 'New List', new_list_path %>
+</div>

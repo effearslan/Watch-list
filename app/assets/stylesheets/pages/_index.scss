@@ -1,2 +1,43 @@
 // Import page-specific CSS files here.
 @import "home";
+#banner {
+  background-image: url("https://d1dxs113ar9ebd.cloudfront.net/225batonrouge/2021/03/iStock-1271522601.jpg?q=70&crop=faces&fit=crop&w=1300&h=600");
+  background-size: cover;
+  height: 300px;
+  color: rgb(243, 232, 232);
+}
+#banner h1{
+  padding-top: 50px;
+  padding-left: 100px;
+}
+
+#banner h3{
+  padding-top: 20px;
+  padding-left: 100px;
+}
+.container {
+  display: grid;
+  grid-template-columns: 1f 1fr 1fr 1fr;
+  grid-gap: 40px;
+}
+
+.genre {
+  height: 200px;
+  width: 200px;
+  text-align: center;
+  padding-top: 50px;
+  border: 2px solid rgb(49, 49, 46);
+}
+
+.list-btn a{
+  color:rgb(243, 232, 232)
+}
+
+.list-btn {
+  margin-left: 80%;
+  margin-top: 40px;
+}
+
+.show {
+  text-decoration: none;
+}
