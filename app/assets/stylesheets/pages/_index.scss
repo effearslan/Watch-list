@@ -102,8 +102,13 @@
   color:rgb(226, 211, 193);
   text-shadow: -9px 2px 21px rgba(0,0,0,0.92);
   border-radius: 6px;
+  position: relative;
 }
 
 .movie-card a{
+  top: 6px;
+  right: 8px;
   color:sandybrown;
+  font-weight: bold;
+  position: absolute;
 }
