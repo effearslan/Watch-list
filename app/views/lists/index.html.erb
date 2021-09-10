@@ -4,7 +4,7 @@
 </div>
 <div class='d-flex'>
   <% @lists.each do |list| %>
-    <div class='genre' background=url_link>
+    <div class='genre' style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path list.photo.key%>')">
       <p><%= list.name %></p>
       <p class="show"><%= link_to 'Show', list %></p>
       <%# <% case list.name %>
